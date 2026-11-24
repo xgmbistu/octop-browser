@@ -1,0 +1,29 @@
+{
+  "schema": 2,
+  "sop_version": "2.0",
+  "revision": "03c766b787dbdd5a",
+  "profile": "generic",
+  "steps": 6,
+  "docs": [],
+  "clients": [
+    "codebuddy"
+  ],
+  "commit": "no",
+  "language": "zh",
+  "managed_files": {
+    ".wally/profiles/project.md": "51cd9273969fda23313b7aa2119bf5d4c09b15e6ab22b16e45481e3ef96c5078",
+    ".wally/core/entry.md": "1a30fd7cb322feb2ba99e0c13bc2d109270b6a43179b58a1bd770febb2d6767f",
+    ".wally/core/scope.md": "34a00d9c7788d73648756991c9ffb9d32f4ac762aa2eecb278a2ce85c399335f",
+    ".wally/review.md": "c837ffb0bbf8580aa3c7786d35dcc73599a8324768e643e670c45c9adffd53ed",
+    ".wally/rules/README.md": "fbe165e982f8e33a3378e3061e8ad27999d9812acb672d9476429d7cc17c3dbe",
+    ".wally/local/.gitignore": "cdbcae15105d6b781e620813c79c7e868740d4e9cc53ce6f5fcbbc12387adf4b",
+    ".agents/skills/clarify/SKILL.md": "9baa2842a0a8b159a53e6501d0f3a8fafab8b07b0ac962bd0bb721576e0109a1",
+    ".agents/skills/wally-open-cli/SKILL.md": "4f4631005fa13ac5a03324eca9cab8e0ca4caf8cea1f29755a962eb972440477",
+    "AGENTS.md": "11b4df1a0b6e5e99cd1fd551bb145a935a5beedeebce7c8cd3d87687436c912b",
+    ".codebuddy/skills/clarify/SKILL.md": "9baa2842a0a8b159a53e6501d0f3a8fafab8b07b0ac962bd0bb721576e0109a1",
+    ".codebuddy/skills/wally-open-cli/SKILL.md": "4f4631005fa13ac5a03324eca9cab8e0ca4caf8cea1f29755a962eb972440477"
+  },
+  "translation_sources": {},
+  "custom_commit": false,
+  "language_basis": "explicit --lang=zh"
+}
