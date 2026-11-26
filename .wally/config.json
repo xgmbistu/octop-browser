@@ -1,0 +1,24 @@
+{
+  "schema": 1,
+  "deploy": {
+    "command": "",
+    "guide": ".wally/docs/devops/test-env-deploy.md",
+    "verify": "",
+    "rollback": "",
+    "readiness": "pending",
+    "gaps": [
+      "No test-environment deployment entrypoint: octop-browser is a Python library (PyPI package) with no Dockerfile, Compose, Kubernetes/Helm manifest, or deploy script; the Makefile only provides package build/publish targets (make build, make publish, make publish-test).",
+      "No target test environment defined: .wally/docs/devops/env.md and .wally/docs/devops/test-env-deploy.md are unfilled templates with no environment id, owner, host/endpoint, access, or authorization boundary.",
+      "No deploy verification: there is no health/readiness check or post-deploy acceptance command for a deployed target.",
+      "No rollback path: no rollback command, target version, or trigger exists; PyPI releases are immutable and cannot be re-uploaded under the same version.",
+      "Deploy credential source is undefined: Makefile publish reads an interactively entered PYPI_TOKEN and release.yml uses the PYPI_API_TOKEN secret, but no vault/issuer/owner for deployment credentials is documented."
+    ]
+  },
+  "it": {
+    "command": "uv run pytest tests/integration/ -v",
+    "guide": ".wally/docs/integration_test/integration_test.md",
+    "success_criteria": "pytest exits 0 and the tests/integration/ suite actually runs (not empty or all-skipped): tests/integration/conftest.py skips the whole suite when find_chrome() returns None, so a skipped run is not a pass. Chrome/Chromium must be available; make install installs dev deps (uv sync --extra dev) and CI installs chromium-browser (.github/workflows/ci.yml). The equivalent full regression is make test (Makefile), run in CI on Python 3.11/3.12 (ci.yml matrix; pyproject.toml requires-python >=3.11). No assertion, environment, or execution failures.",
+    "readiness": "ready",
+    "gaps": []
+  }
+}
