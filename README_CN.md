@@ -132,6 +132,25 @@ python -m octop_browser.mcp_server   # 或：make mcp
 而不是一个统一分发的工具。参数与 Python API 一致，因此 `browser_close_session` 同样
 接受 `kill` 来结束 Chrome 进程。
 
+#### HTTP 接口（SSE 模式）
+
+设置 `MCP_PORT` 后，服务切换为 SSE HTTP 服务（Starlette + uvicorn），监听
+`MCP_HOST`（默认 `0.0.0.0`）。除 MCP 工具外，它还提供以下原生 HTTP 路由：
+
+| 方法 | 路径 | 鉴权 | 响应 |
+|------|------|------|------|
+| `GET` | `/welcome` | 无 | `200`、`application/json`、`{"message":"welcome"}` |
+| `GET` | `/sse` | 无 | MCP SSE 流 |
+| `POST` | `/messages/` | 无 | MCP 客户端到服务端消息 |
+
+```bash
+MCP_PORT=8000 python -m octop_browser.mcp_server
+curl http://localhost:8000/welcome
+# {"message":"welcome"}
+```
+
+`GET /welcome` 是普通端点，无需登录，也无需 MCP 握手；其他方法（如 `POST`）返回 `405`。
+
 ### Agent 技能
 `skills/` 目录提供了开箱可用的 Skill 文件，供支持技能加载的 Agent 直接使用——
 `skills/octop-browser/SKILL.md`（英文）与 `skills/octop-browser-zh/SKILL.md`（中文）。

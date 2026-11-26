@@ -132,6 +132,27 @@ Over MCP each action is exposed as its own tool named after it — `browser_navi
 `install_browser`, … — rather than as a single dispatching tool. Arguments match the
 Python API, so `browser_close_session` also takes `kill` to terminate Chrome.
 
+#### HTTP endpoints (SSE mode)
+
+Setting `MCP_PORT` switches the server to an SSE HTTP server (Starlette +
+uvicorn) listening on `MCP_HOST` (default `0.0.0.0`). In addition to the MCP
+tools it exposes these native HTTP routes:
+
+| Method | Path | Auth | Response |
+|--------|------|------|----------|
+| `GET` | `/welcome` | none | `200`, `application/json`, `{"message":"welcome"}` |
+| `GET` | `/sse` | none | MCP SSE stream |
+| `POST` | `/messages/` | none | MCP client-to-server messages |
+
+```bash
+MCP_PORT=8000 python -m octop_browser.mcp_server
+curl http://localhost:8000/welcome
+# {"message":"welcome"}
+```
+
+`GET /welcome` is a plain endpoint — no login and no MCP handshake required.
+Other methods (such as `POST`) return `405`.
+
 ### Agent skills
 The `skills/` directory ships ready-made Skill files for agents that support
 skill loading — `skills/octop-browser/SKILL.md` (English) and
