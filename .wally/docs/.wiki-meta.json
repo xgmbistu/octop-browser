@@ -1,0 +1,1132 @@
+{
+  "generator": "wally-codewiki",
+  "language": "zh-CN",
+  "workspaceMode": "single-repo",
+  "generatedAt": "2026-11-26T17:13:28Z",
+  "commitHash": "f56249214aa183648d6b684b6f39445fe438e52d",
+  "branch": "chore/wally-init-20261127-c114",
+  "mode": "full",
+  "pageCount": 43,
+  "skippedHumanPages": [],
+  "driftWarnings": [],
+  "pageOrder": [
+    "INDEX.md",
+    "architecture/browser-session-engine.md",
+    "architecture/cdp-transport-and-storage.md",
+    "architecture/cli.md",
+    "architecture/index.md",
+    "architecture/mcp-server.md",
+    "architecture/module-dep-matrix.md",
+    "architecture/record-daemon.md",
+    "business/domain-models/index.md",
+    "business/domain-models/recording-artifacts.md",
+    "business/domain-models/tool-result-and-metrics.md",
+    "business/index.md",
+    "business/wf-action-dispatch.md",
+    "business/wf-browser-session-lifecycle.md",
+    "business/wf-chromium-install.md",
+    "business/wf-dom-ref-targeting.md",
+    "business/wf-record-capture.md",
+    "business/wf-replay.md",
+    "business/wf-semantic-steps.md",
+    "business/wf-tab-management.md",
+    "contracts/api-reference.md",
+    "contracts/api/browser-actions.md",
+    "contracts/api/mcp-tools.md",
+    "contracts/api/record-replay.md",
+    "contracts/configuration.md",
+    "contracts/error-codes.md",
+    "integrations/downstream/chrome-cdp.md",
+    "integrations/downstream/chromium-process.md",
+    "integrations/downstream/linux-system-deps.md",
+    "integrations/downstream/mcp-transport.md",
+    "integrations/downstream/playwright-installer.md",
+    "integrations/downstream/record-daemon-ipc.md",
+    "integrations/index.md",
+    "integrations/topology-and-mapping.md",
+    "operations/boundary.md",
+    "operations/deployment-and-runtime.md",
+    "operations/dev-and-test.md",
+    "operations/pitfalls-and-adr.md",
+    "operations/runbook-and-observability.md",
+    "overview/business-architecture.md",
+    "overview/callchain-panorama.md",
+    "overview/glossary.md",
+    "overview/system-architecture.md"
+  ],
+  "fileToDocs": {
+    ".githooks/pre-commit": [
+      "operations/dev-and-test.md"
+    ],
+    ".github/workflows/ci.yml": [
+      "operations/dev-and-test.md"
+    ],
+    "Makefile": [
+      "operations/deployment-and-runtime.md",
+      "operations/dev-and-test.md"
+    ],
+    "README.md": [
+      "operations/pitfalls-and-adr.md"
+    ],
+    "pyproject.toml": [
+      "operations/deployment-and-runtime.md",
+      "operations/dev-and-test.md",
+      "operations/pitfalls-and-adr.md"
+    ],
+    "scripts/record_replay_smoke.py": [
+      "operations/dev-and-test.md"
+    ],
+    "src/octop_browser/__init__.py": [
+      "architecture/index.md",
+      "contracts/api-reference.md",
+      "overview/system-architecture.md"
+    ],
+    "src/octop_browser/actions/capture.py": [
+      "contracts/api/browser-actions.md",
+      "integrations/downstream/chrome-cdp.md",
+      "integrations/topology-and-mapping.md",
+      "operations/pitfalls-and-adr.md"
+    ],
+    "src/octop_browser/actions/interact.py": [
+      "architecture/browser-session-engine.md",
+      "business/wf-dom-ref-targeting.md",
+      "contracts/api/browser-actions.md",
+      "contracts/error-codes.md",
+      "integrations/topology-and-mapping.md"
+    ],
+    "src/octop_browser/actions/js_eval.py": [
+      "integrations/downstream/chrome-cdp.md"
+    ],
+    "src/octop_browser/actions/navigate.py": [
+      "integrations/downstream/chrome-cdp.md"
+    ],
+    "src/octop_browser/cdp/client.py": [
+      "architecture/cdp-transport-and-storage.md",
+      "architecture/module-dep-matrix.md",
+      "contracts/error-codes.md",
+      "integrations/downstream/chrome-cdp.md",
+      "integrations/index.md",
+      "integrations/topology-and-mapping.md",
+      "overview/callchain-panorama.md",
+      "overview/system-architecture.md"
+    ],
+    "src/octop_browser/cdp/launch_prep.py": [
+      "contracts/configuration.md",
+      "integrations/downstream/chromium-process.md"
+    ],
+    "src/octop_browser/cdp/launcher.py": [
+      "business/wf-browser-session-lifecycle.md",
+      "business/wf-tab-management.md",
+      "contracts/configuration.md",
+      "integrations/downstream/chromium-process.md",
+      "integrations/index.md",
+      "operations/boundary.md",
+      "operations/runbook-and-observability.md",
+      "overview/callchain-panorama.md",
+      "overview/system-architecture.md"
+    ],
+    "src/octop_browser/cli.py": [
+      "architecture/cli.md",
+      "architecture/module-dep-matrix.md",
+      "business/wf-chromium-install.md",
+      "contracts/api-reference.md",
+      "contracts/api/browser-actions.md",
+      "contracts/api/record-replay.md",
+      "integrations/index.md",
+      "integrations/topology-and-mapping.md",
+      "operations/runbook-and-observability.md",
+      "overview/business-architecture.md",
+      "overview/system-architecture.md"
+    ],
+    "src/octop_browser/dom/builder.py": [
+      "architecture/browser-session-engine.md",
+      "business/wf-dom-ref-targeting.md",
+      "operations/pitfalls-and-adr.md",
+      "overview/glossary.md"
+    ],
+    "src/octop_browser/dom/refs.py": [
+      "architecture/browser-session-engine.md",
+      "business/wf-dom-ref-targeting.md",
+      "overview/glossary.md"
+    ],
+    "src/octop_browser/hooks.py": [
+      "architecture/browser-session-engine.md",
+      "business/domain-models/tool-result-and-metrics.md",
+      "business/wf-action-dispatch.md",
+      "operations/pitfalls-and-adr.md"
+    ],
+    "src/octop_browser/idle.py": [
+      "architecture/browser-session-engine.md",
+      "business/wf-browser-session-lifecycle.md",
+      "operations/runbook-and-observability.md"
+    ],
+    "src/octop_browser/install.py": [
+      "business/index.md",
+      "business/wf-chromium-install.md",
+      "contracts/configuration.md",
+      "integrations/downstream/linux-system-deps.md",
+      "integrations/downstream/playwright-installer.md",
+      "integrations/index.md",
+      "operations/pitfalls-and-adr.md",
+      "overview/business-architecture.md"
+    ],
+    "src/octop_browser/linux_deps.py": [
+      "business/wf-chromium-install.md",
+      "integrations/downstream/linux-system-deps.md"
+    ],
+    "src/octop_browser/mcp_server.py": [
+      "architecture/mcp-server.md",
+      "architecture/module-dep-matrix.md",
+      "contracts/api-reference.md",
+      "contracts/api/mcp-tools.md",
+      "contracts/api/record-replay.md",
+      "contracts/configuration.md",
+      "contracts/error-codes.md",
+      "integrations/downstream/mcp-transport.md",
+      "integrations/index.md",
+      "integrations/topology-and-mapping.md",
+      "operations/boundary.md",
+      "operations/deployment-and-runtime.md",
+      "overview/system-architecture.md"
+    ],
+    "src/octop_browser/mode.py": [
+      "architecture/cdp-transport-and-storage.md",
+      "business/wf-browser-session-lifecycle.md",
+      "contracts/configuration.md"
+    ],
+    "src/octop_browser/models.py": [
+      "architecture/index.md",
+      "architecture/mcp-server.md",
+      "business/domain-models/index.md",
+      "business/domain-models/tool-result-and-metrics.md",
+      "business/wf-action-dispatch.md",
+      "integrations/downstream/mcp-transport.md",
+      "overview/glossary.md"
+    ],
+    "src/octop_browser/playwright_download.py": [
+      "business/wf-chromium-install.md",
+      "contracts/configuration.md",
+      "integrations/downstream/playwright-installer.md"
+    ],
+    "src/octop_browser/profile.py": [
+      "architecture/cdp-transport-and-storage.md",
+      "architecture/module-dep-matrix.md",
+      "business/wf-browser-session-lifecycle.md",
+      "business/wf-tab-management.md",
+      "integrations/downstream/chromium-process.md",
+      "operations/deployment-and-runtime.md",
+      "operations/pitfalls-and-adr.md"
+    ],
+    "src/octop_browser/record/__init__.py": [
+      "architecture/index.md"
+    ],
+    "src/octop_browser/record/daemon.py": [
+      "architecture/module-dep-matrix.md",
+      "architecture/record-daemon.md",
+      "contracts/api-reference.md",
+      "contracts/api/record-replay.md",
+      "contracts/error-codes.md",
+      "integrations/downstream/record-daemon-ipc.md",
+      "integrations/index.md",
+      "integrations/topology-and-mapping.md",
+      "operations/runbook-and-observability.md"
+    ],
+    "src/octop_browser/record/injected/recorder.js": [
+      "architecture/record-daemon.md",
+      "business/wf-record-capture.md"
+    ],
+    "src/octop_browser/record/matcher.py": [
+      "business/wf-replay.md"
+    ],
+    "src/octop_browser/record/models.py": [
+      "business/domain-models/index.md",
+      "business/domain-models/recording-artifacts.md",
+      "business/wf-semantic-steps.md",
+      "integrations/downstream/record-daemon-ipc.md",
+      "overview/glossary.md"
+    ],
+    "src/octop_browser/record/privacy.py": [
+      "architecture/record-daemon.md",
+      "business/wf-record-capture.md"
+    ],
+    "src/octop_browser/record/recorder.py": [
+      "architecture/module-dep-matrix.md",
+      "architecture/record-daemon.md",
+      "business/index.md",
+      "business/wf-record-capture.md",
+      "contracts/api/record-replay.md",
+      "operations/boundary.md",
+      "overview/business-architecture.md",
+      "overview/callchain-panorama.md"
+    ],
+    "src/octop_browser/record/replay.py": [
+      "architecture/module-dep-matrix.md",
+      "business/index.md",
+      "business/wf-replay.md",
+      "contracts/error-codes.md",
+      "operations/runbook-and-observability.md",
+      "overview/business-architecture.md",
+      "overview/callchain-panorama.md"
+    ],
+    "src/octop_browser/record/semantic.py": [
+      "business/index.md",
+      "business/wf-semantic-steps.md"
+    ],
+    "src/octop_browser/record/settings.py": [
+      "architecture/cdp-transport-and-storage.md",
+      "business/domain-models/recording-artifacts.md",
+      "contracts/configuration.md",
+      "operations/deployment-and-runtime.md"
+    ],
+    "src/octop_browser/record/skill_generator.py": [
+      "business/domain-models/recording-artifacts.md",
+      "business/wf-replay.md"
+    ],
+    "src/octop_browser/record/store.py": [
+      "architecture/cdp-transport-and-storage.md",
+      "business/domain-models/index.md",
+      "business/domain-models/recording-artifacts.md",
+      "business/wf-record-capture.md",
+      "business/wf-replay.md",
+      "operations/deployment-and-runtime.md",
+      "operations/pitfalls-and-adr.md",
+      "operations/runbook-and-observability.md"
+    ],
+    "src/octop_browser/record/url_filter.py": [
+      "business/wf-semantic-steps.md"
+    ],
+    "src/octop_browser/session.py": [
+      "architecture/browser-session-engine.md",
+      "architecture/module-dep-matrix.md",
+      "business/index.md",
+      "business/wf-action-dispatch.md",
+      "business/wf-browser-session-lifecycle.md",
+      "business/wf-dom-ref-targeting.md",
+      "business/wf-tab-management.md",
+      "contracts/api/browser-actions.md",
+      "contracts/error-codes.md",
+      "integrations/downstream/chrome-cdp.md",
+      "integrations/topology-and-mapping.md",
+      "operations/boundary.md",
+      "operations/pitfalls-and-adr.md",
+      "operations/runbook-and-observability.md",
+      "overview/business-architecture.md",
+      "overview/callchain-panorama.md",
+      "overview/system-architecture.md"
+    ],
+    "src/octop_browser/settings.py": [
+      "architecture/cdp-transport-and-storage.md",
+      "architecture/module-dep-matrix.md",
+      "business/domain-models/index.md",
+      "business/domain-models/tool-result-and-metrics.md",
+      "contracts/configuration.md",
+      "operations/deployment-and-runtime.md",
+      "overview/glossary.md"
+    ],
+    "src/octop_browser/tool_interface.py": [
+      "architecture/cli.md",
+      "architecture/mcp-server.md",
+      "architecture/module-dep-matrix.md",
+      "business/index.md",
+      "business/wf-action-dispatch.md",
+      "contracts/api-reference.md",
+      "contracts/api/browser-actions.md",
+      "contracts/api/mcp-tools.md",
+      "contracts/error-codes.md",
+      "integrations/topology-and-mapping.md",
+      "overview/callchain-panorama.md",
+      "overview/glossary.md",
+      "overview/system-architecture.md"
+    ],
+    "tests/integration/conftest.py": [
+      "operations/dev-and-test.md"
+    ],
+    "tests/unit/conftest.py": [
+      "operations/dev-and-test.md"
+    ]
+  },
+  "repoDeps": [],
+  "moduleTree": [
+    {
+      "page": "architecture/browser-session-engine.md",
+      "sourcePaths": [
+        "src/octop_browser/session.py",
+        "src/octop_browser/dom/builder.py",
+        "src/octop_browser/dom/refs.py",
+        "src/octop_browser/actions/interact.py",
+        "src/octop_browser/hooks.py",
+        "src/octop_browser/idle.py"
+      ],
+      "dependsOn": [
+        "contracts/api-reference.md",
+        "architecture/mcp-server.md"
+      ],
+      "usedBy": [
+        "integrations/downstream/chrome-cdp.md",
+        "business/wf-action-dispatch.md"
+      ]
+    },
+    {
+      "page": "architecture/cdp-transport-and-storage.md",
+      "sourcePaths": [
+        "src/octop_browser/cdp/client.py",
+        "src/octop_browser/profile.py",
+        "src/octop_browser/settings.py",
+        "src/octop_browser/mode.py",
+        "src/octop_browser/record/store.py",
+        "src/octop_browser/record/settings.py"
+      ],
+      "dependsOn": [
+        "architecture/browser-session-engine.md",
+        "contracts/configuration.md"
+      ],
+      "usedBy": [
+        "integrations/index.md",
+        "integrations/downstream/chrome-cdp.md"
+      ]
+    },
+    {
+      "page": "architecture/cli.md",
+      "sourcePaths": [
+        "src/octop_browser/cli.py",
+        "src/octop_browser/tool_interface.py"
+      ],
+      "dependsOn": [
+        "INDEX.md",
+        "contracts/api-reference.md"
+      ],
+      "usedBy": [
+        "architecture/mcp-server.md",
+        "business/index.md"
+      ]
+    },
+    {
+      "page": "architecture/index.md",
+      "sourcePaths": [
+        "src/octop_browser/__init__.py",
+        "src/octop_browser/record/__init__.py",
+        "src/octop_browser/models.py"
+      ],
+      "dependsOn": [
+        "INDEX.md",
+        "overview/system-architecture.md"
+      ],
+      "usedBy": [
+        "architecture/module-dep-matrix.md",
+        "operations/boundary.md"
+      ]
+    },
+    {
+      "page": "architecture/mcp-server.md",
+      "sourcePaths": [
+        "src/octop_browser/mcp_server.py",
+        "src/octop_browser/tool_interface.py",
+        "src/octop_browser/models.py"
+      ],
+      "dependsOn": [
+        "contracts/api-reference.md",
+        "INDEX.md"
+      ],
+      "usedBy": [
+        "integrations/index.md",
+        "architecture/browser-session-engine.md"
+      ]
+    },
+    {
+      "page": "architecture/module-dep-matrix.md",
+      "sourcePaths": [
+        "src/octop_browser/session.py",
+        "src/octop_browser/tool_interface.py",
+        "src/octop_browser/mcp_server.py",
+        "src/octop_browser/cli.py",
+        "src/octop_browser/record/recorder.py",
+        "src/octop_browser/record/replay.py",
+        "src/octop_browser/cdp/client.py",
+        "src/octop_browser/record/daemon.py",
+        "src/octop_browser/profile.py",
+        "src/octop_browser/settings.py"
+      ],
+      "dependsOn": [
+        "architecture/index.md"
+      ],
+      "usedBy": [
+        "operations/pitfalls-and-adr.md",
+        "operations/boundary.md"
+      ]
+    },
+    {
+      "page": "architecture/record-daemon.md",
+      "sourcePaths": [
+        "src/octop_browser/record/daemon.py",
+        "src/octop_browser/record/recorder.py",
+        "src/octop_browser/record/injected/recorder.js",
+        "src/octop_browser/record/privacy.py"
+      ],
+      "dependsOn": [
+        "architecture/cli.md",
+        "architecture/mcp-server.md"
+      ],
+      "usedBy": [
+        "integrations/downstream/record-daemon-ipc.md",
+        "business/wf-record-capture.md"
+      ]
+    },
+    {
+      "page": "business/domain-models/index.md",
+      "sourcePaths": [
+        "src/octop_browser/models.py",
+        "src/octop_browser/record/models.py",
+        "src/octop_browser/record/store.py",
+        "src/octop_browser/settings.py"
+      ],
+      "dependsOn": [
+        "business/index.md"
+      ],
+      "usedBy": [
+        "business/domain-models/tool-result-and-metrics.md",
+        "business/domain-models/recording-artifacts.md"
+      ]
+    },
+    {
+      "page": "business/domain-models/recording-artifacts.md",
+      "sourcePaths": [
+        "src/octop_browser/record/models.py",
+        "src/octop_browser/record/store.py",
+        "src/octop_browser/record/settings.py",
+        "src/octop_browser/record/skill_generator.py"
+      ],
+      "dependsOn": [
+        "business/domain-models/index.md",
+        "business/wf-record-capture.md"
+      ],
+      "usedBy": [
+        "business/wf-replay.md",
+        "operations/deployment-and-runtime.md"
+      ]
+    },
+    {
+      "page": "business/domain-models/tool-result-and-metrics.md",
+      "sourcePaths": [
+        "src/octop_browser/models.py",
+        "src/octop_browser/settings.py",
+        "src/octop_browser/hooks.py"
+      ],
+      "dependsOn": [
+        "business/domain-models/index.md"
+      ],
+      "usedBy": [
+        "contracts/api-reference.md",
+        "architecture/browser-session-engine.md"
+      ]
+    },
+    {
+      "page": "business/index.md",
+      "sourcePaths": [
+        "src/octop_browser/tool_interface.py",
+        "src/octop_browser/session.py",
+        "src/octop_browser/record/recorder.py",
+        "src/octop_browser/record/semantic.py",
+        "src/octop_browser/record/replay.py",
+        "src/octop_browser/install.py"
+      ],
+      "dependsOn": [
+        "INDEX.md",
+        "overview/business-architecture.md"
+      ],
+      "usedBy": [
+        "business/domain-models/index.md",
+        "contracts/api-reference.md"
+      ]
+    },
+    {
+      "page": "business/wf-action-dispatch.md",
+      "sourcePaths": [
+        "src/octop_browser/tool_interface.py",
+        "src/octop_browser/session.py",
+        "src/octop_browser/models.py",
+        "src/octop_browser/hooks.py"
+      ],
+      "dependsOn": [
+        "business/index.md",
+        "contracts/api-reference.md"
+      ],
+      "usedBy": [
+        "integrations/downstream/chrome-cdp.md",
+        "business/wf-dom-ref-targeting.md"
+      ]
+    },
+    {
+      "page": "business/wf-browser-session-lifecycle.md",
+      "sourcePaths": [
+        "src/octop_browser/session.py",
+        "src/octop_browser/mode.py",
+        "src/octop_browser/profile.py",
+        "src/octop_browser/cdp/launcher.py",
+        "src/octop_browser/idle.py"
+      ],
+      "dependsOn": [
+        "business/index.md",
+        "contracts/api-reference.md"
+      ],
+      "usedBy": [
+        "business/wf-tab-management.md",
+        "integrations/downstream/chrome-cdp.md"
+      ]
+    },
+    {
+      "page": "business/wf-chromium-install.md",
+      "sourcePaths": [
+        "src/octop_browser/install.py",
+        "src/octop_browser/playwright_download.py",
+        "src/octop_browser/linux_deps.py",
+        "src/octop_browser/cli.py"
+      ],
+      "dependsOn": [
+        "business/index.md",
+        "contracts/api-reference.md"
+      ],
+      "usedBy": [
+        "integrations/downstream/playwright-installer.md",
+        "integrations/downstream/linux-system-deps.md"
+      ]
+    },
+    {
+      "page": "business/wf-dom-ref-targeting.md",
+      "sourcePaths": [
+        "src/octop_browser/dom/builder.py",
+        "src/octop_browser/dom/refs.py",
+        "src/octop_browser/actions/interact.py",
+        "src/octop_browser/session.py"
+      ],
+      "dependsOn": [
+        "business/index.md",
+        "contracts/api-reference.md"
+      ],
+      "usedBy": [
+        "integrations/downstream/chrome-cdp.md",
+        "business/wf-replay.md"
+      ]
+    },
+    {
+      "page": "business/wf-record-capture.md",
+      "sourcePaths": [
+        "src/octop_browser/record/recorder.py",
+        "src/octop_browser/record/injected/recorder.js",
+        "src/octop_browser/record/privacy.py",
+        "src/octop_browser/record/store.py"
+      ],
+      "dependsOn": [
+        "business/index.md",
+        "architecture/record-daemon.md"
+      ],
+      "usedBy": [
+        "business/wf-semantic-steps.md",
+        "integrations/downstream/record-daemon-ipc.md"
+      ]
+    },
+    {
+      "page": "business/wf-replay.md",
+      "sourcePaths": [
+        "src/octop_browser/record/replay.py",
+        "src/octop_browser/record/matcher.py",
+        "src/octop_browser/record/skill_generator.py",
+        "src/octop_browser/record/store.py"
+      ],
+      "dependsOn": [
+        "business/index.md",
+        "business/wf-semantic-steps.md"
+      ],
+      "usedBy": [
+        "business/wf-action-dispatch.md",
+        "operations/runbook-and-observability.md"
+      ]
+    },
+    {
+      "page": "business/wf-semantic-steps.md",
+      "sourcePaths": [
+        "src/octop_browser/record/semantic.py",
+        "src/octop_browser/record/models.py",
+        "src/octop_browser/record/url_filter.py"
+      ],
+      "dependsOn": [
+        "business/index.md",
+        "business/wf-record-capture.md"
+      ],
+      "usedBy": [
+        "business/wf-replay.md",
+        "business/domain-models/recording-artifacts.md"
+      ]
+    },
+    {
+      "page": "business/wf-tab-management.md",
+      "sourcePaths": [
+        "src/octop_browser/session.py",
+        "src/octop_browser/profile.py",
+        "src/octop_browser/cdp/launcher.py"
+      ],
+      "dependsOn": [
+        "business/index.md",
+        "business/wf-browser-session-lifecycle.md"
+      ],
+      "usedBy": [
+        "business/wf-record-capture.md",
+        "integrations/downstream/chrome-cdp.md"
+      ]
+    },
+    {
+      "page": "contracts/api-reference.md",
+      "sourcePaths": [
+        "src/octop_browser/cli.py",
+        "src/octop_browser/mcp_server.py",
+        "src/octop_browser/tool_interface.py",
+        "src/octop_browser/__init__.py",
+        "src/octop_browser/record/daemon.py"
+      ],
+      "dependsOn": [
+        "INDEX.md",
+        "overview/business-architecture.md"
+      ],
+      "usedBy": [
+        "integrations/topology-and-mapping.md",
+        "contracts/error-codes.md"
+      ]
+    },
+    {
+      "page": "contracts/api/browser-actions.md",
+      "sourcePaths": [
+        "src/octop_browser/tool_interface.py",
+        "src/octop_browser/session.py",
+        "src/octop_browser/cli.py",
+        "src/octop_browser/actions/interact.py",
+        "src/octop_browser/actions/capture.py"
+      ],
+      "dependsOn": [
+        "contracts/api-reference.md"
+      ],
+      "usedBy": [
+        "business/wf-action-dispatch.md",
+        "contracts/error-codes.md"
+      ]
+    },
+    {
+      "page": "contracts/api/mcp-tools.md",
+      "sourcePaths": [
+        "src/octop_browser/mcp_server.py",
+        "src/octop_browser/tool_interface.py"
+      ],
+      "dependsOn": [
+        "contracts/api-reference.md",
+        "architecture/mcp-server.md"
+      ],
+      "usedBy": [
+        "contracts/api/record-replay.md",
+        "contracts/error-codes.md"
+      ]
+    },
+    {
+      "page": "contracts/api/record-replay.md",
+      "sourcePaths": [
+        "src/octop_browser/cli.py",
+        "src/octop_browser/record/daemon.py",
+        "src/octop_browser/mcp_server.py",
+        "src/octop_browser/record/recorder.py"
+      ],
+      "dependsOn": [
+        "contracts/api-reference.md"
+      ],
+      "usedBy": [
+        "integrations/downstream/record-daemon-ipc.md",
+        "business/wf-record-capture.md"
+      ]
+    },
+    {
+      "page": "contracts/configuration.md",
+      "sourcePaths": [
+        "src/octop_browser/settings.py",
+        "src/octop_browser/record/settings.py",
+        "src/octop_browser/mode.py",
+        "src/octop_browser/cdp/launcher.py",
+        "src/octop_browser/install.py",
+        "src/octop_browser/playwright_download.py",
+        "src/octop_browser/mcp_server.py",
+        "src/octop_browser/cdp/launch_prep.py"
+      ],
+      "dependsOn": [
+        "INDEX.md",
+        "overview/system-architecture.md"
+      ],
+      "usedBy": [
+        "operations/deployment-and-runtime.md",
+        "architecture/cdp-transport-and-storage.md"
+      ]
+    },
+    {
+      "page": "contracts/error-codes.md",
+      "sourcePaths": [
+        "src/octop_browser/cdp/client.py",
+        "src/octop_browser/tool_interface.py",
+        "src/octop_browser/actions/interact.py",
+        "src/octop_browser/record/daemon.py",
+        "src/octop_browser/record/replay.py",
+        "src/octop_browser/session.py",
+        "src/octop_browser/mcp_server.py"
+      ],
+      "dependsOn": [
+        "contracts/api-reference.md",
+        "integrations/index.md"
+      ],
+      "usedBy": [
+        "operations/runbook-and-observability.md",
+        "operations/pitfalls-and-adr.md"
+      ]
+    },
+    {
+      "page": "integrations/downstream/chrome-cdp.md",
+      "sourcePaths": [
+        "src/octop_browser/cdp/client.py",
+        "src/octop_browser/actions/navigate.py",
+        "src/octop_browser/actions/js_eval.py",
+        "src/octop_browser/actions/capture.py",
+        "src/octop_browser/session.py"
+      ],
+      "dependsOn": [
+        "integrations/index.md",
+        "integrations/topology-and-mapping.md"
+      ],
+      "usedBy": []
+    },
+    {
+      "page": "integrations/downstream/chromium-process.md",
+      "sourcePaths": [
+        "src/octop_browser/cdp/launcher.py",
+        "src/octop_browser/cdp/launch_prep.py",
+        "src/octop_browser/profile.py"
+      ],
+      "dependsOn": [
+        "integrations/index.md",
+        "architecture/cdp-transport-and-storage.md"
+      ],
+      "usedBy": [
+        "integrations/downstream/chrome-cdp.md"
+      ]
+    },
+    {
+      "page": "integrations/downstream/linux-system-deps.md",
+      "sourcePaths": [
+        "src/octop_browser/linux_deps.py",
+        "src/octop_browser/install.py"
+      ],
+      "dependsOn": [
+        "integrations/index.md",
+        "integrations/downstream/playwright-installer.md"
+      ],
+      "usedBy": []
+    },
+    {
+      "page": "integrations/downstream/mcp-transport.md",
+      "sourcePaths": [
+        "src/octop_browser/mcp_server.py",
+        "src/octop_browser/models.py"
+      ],
+      "dependsOn": [
+        "integrations/index.md",
+        "architecture/mcp-server.md"
+      ],
+      "usedBy": []
+    },
+    {
+      "page": "integrations/downstream/playwright-installer.md",
+      "sourcePaths": [
+        "src/octop_browser/install.py",
+        "src/octop_browser/playwright_download.py"
+      ],
+      "dependsOn": [
+        "integrations/index.md",
+        "architecture/mcp-server.md"
+      ],
+      "usedBy": [
+        "integrations/downstream/linux-system-deps.md"
+      ]
+    },
+    {
+      "page": "integrations/downstream/record-daemon-ipc.md",
+      "sourcePaths": [
+        "src/octop_browser/record/daemon.py",
+        "src/octop_browser/record/models.py"
+      ],
+      "dependsOn": [
+        "integrations/index.md",
+        "architecture/record-daemon.md"
+      ],
+      "usedBy": [
+        "business/wf-record-capture.md"
+      ]
+    },
+    {
+      "page": "integrations/index.md",
+      "sourcePaths": [
+        "src/octop_browser/cdp/client.py",
+        "src/octop_browser/cdp/launcher.py",
+        "src/octop_browser/record/daemon.py",
+        "src/octop_browser/mcp_server.py",
+        "src/octop_browser/cli.py",
+        "src/octop_browser/install.py"
+      ],
+      "dependsOn": [
+        "INDEX.md",
+        "overview/system-architecture.md"
+      ],
+      "usedBy": [
+        "integrations/topology-and-mapping.md"
+      ]
+    },
+    {
+      "page": "integrations/topology-and-mapping.md",
+      "sourcePaths": [
+        "src/octop_browser/cli.py",
+        "src/octop_browser/mcp_server.py",
+        "src/octop_browser/tool_interface.py",
+        "src/octop_browser/record/daemon.py",
+        "src/octop_browser/session.py",
+        "src/octop_browser/actions/interact.py",
+        "src/octop_browser/actions/capture.py",
+        "src/octop_browser/cdp/client.py"
+      ],
+      "dependsOn": [
+        "contracts/api-reference.md",
+        "integrations/index.md"
+      ],
+      "usedBy": [
+        "integrations/downstream/chrome-cdp.md",
+        "integrations/downstream/record-daemon-ipc.md",
+        "integrations/downstream/mcp-transport.md"
+      ]
+    },
+    {
+      "page": "operations/boundary.md",
+      "sourcePaths": [
+        "src/octop_browser/mcp_server.py",
+        "src/octop_browser/session.py",
+        "src/octop_browser/record/recorder.py",
+        "src/octop_browser/cdp/launcher.py"
+      ],
+      "dependsOn": [
+        "INDEX.md",
+        "overview/system-architecture.md"
+      ],
+      "usedBy": []
+    },
+    {
+      "page": "operations/deployment-and-runtime.md",
+      "sourcePaths": [
+        "pyproject.toml",
+        "Makefile",
+        "src/octop_browser/mcp_server.py",
+        "src/octop_browser/profile.py",
+        "src/octop_browser/settings.py",
+        "src/octop_browser/record/store.py",
+        "src/octop_browser/record/settings.py"
+      ],
+      "dependsOn": [
+        "INDEX.md",
+        "contracts/configuration.md"
+      ],
+      "usedBy": [
+        "operations/runbook-and-observability.md",
+        "operations/boundary.md"
+      ]
+    },
+    {
+      "page": "operations/dev-and-test.md",
+      "sourcePaths": [
+        "Makefile",
+        "pyproject.toml",
+        "tests/unit/conftest.py",
+        "tests/integration/conftest.py",
+        ".github/workflows/ci.yml",
+        ".githooks/pre-commit",
+        "scripts/record_replay_smoke.py"
+      ],
+      "dependsOn": [
+        "INDEX.md",
+        "contracts/configuration.md"
+      ],
+      "usedBy": [
+        "operations/pitfalls-and-adr.md"
+      ]
+    },
+    {
+      "page": "operations/pitfalls-and-adr.md",
+      "sourcePaths": [
+        "src/octop_browser/session.py",
+        "src/octop_browser/install.py",
+        "src/octop_browser/hooks.py",
+        "src/octop_browser/profile.py",
+        "src/octop_browser/dom/builder.py",
+        "src/octop_browser/actions/capture.py",
+        "src/octop_browser/record/store.py",
+        "pyproject.toml",
+        "README.md"
+      ],
+      "dependsOn": [
+        "INDEX.md",
+        "overview/system-architecture.md"
+      ],
+      "usedBy": [
+        "operations/boundary.md",
+        "operations/dev-and-test.md"
+      ]
+    },
+    {
+      "page": "operations/runbook-and-observability.md",
+      "sourcePaths": [
+        "src/octop_browser/cdp/launcher.py",
+        "src/octop_browser/record/replay.py",
+        "src/octop_browser/record/store.py",
+        "src/octop_browser/idle.py",
+        "src/octop_browser/session.py",
+        "src/octop_browser/cli.py",
+        "src/octop_browser/record/daemon.py"
+      ],
+      "dependsOn": [
+        "contracts/error-codes.md",
+        "contracts/configuration.md"
+      ],
+      "usedBy": [
+        "operations/boundary.md"
+      ]
+    },
+    {
+      "page": "overview/business-architecture.md",
+      "sourcePaths": [
+        "src/octop_browser/record/recorder.py",
+        "src/octop_browser/record/replay.py",
+        "src/octop_browser/session.py",
+        "src/octop_browser/cli.py",
+        "src/octop_browser/install.py"
+      ],
+      "dependsOn": [
+        "INDEX.md"
+      ],
+      "usedBy": [
+        "business/index.md",
+        "business/domain-models/index.md"
+      ]
+    },
+    {
+      "page": "overview/callchain-panorama.md",
+      "sourcePaths": [
+        "src/octop_browser/tool_interface.py",
+        "src/octop_browser/session.py",
+        "src/octop_browser/cdp/client.py",
+        "src/octop_browser/cdp/launcher.py",
+        "src/octop_browser/record/recorder.py",
+        "src/octop_browser/record/replay.py"
+      ],
+      "dependsOn": [
+        "INDEX.md"
+      ],
+      "usedBy": [
+        "integrations/topology-and-mapping.md",
+        "contracts/error-codes.md"
+      ]
+    },
+    {
+      "page": "overview/glossary.md",
+      "sourcePaths": [
+        "src/octop_browser/models.py",
+        "src/octop_browser/tool_interface.py",
+        "src/octop_browser/dom/builder.py",
+        "src/octop_browser/dom/refs.py",
+        "src/octop_browser/record/models.py",
+        "src/octop_browser/settings.py"
+      ],
+      "dependsOn": [
+        "INDEX.md"
+      ],
+      "usedBy": [
+        "business/domain-models/index.md",
+        "contracts/api-reference.md"
+      ]
+    },
+    {
+      "page": "overview/system-architecture.md",
+      "sourcePaths": [
+        "src/octop_browser/__init__.py",
+        "src/octop_browser/session.py",
+        "src/octop_browser/tool_interface.py",
+        "src/octop_browser/cdp/client.py",
+        "src/octop_browser/cdp/launcher.py",
+        "src/octop_browser/mcp_server.py",
+        "src/octop_browser/cli.py"
+      ],
+      "dependsOn": [
+        "INDEX.md"
+      ],
+      "usedBy": [
+        "architecture/index.md",
+        "integrations/index.md"
+      ]
+    }
+  ],
+  "excludedPages": [
+    {
+      "path": "apis/_template.md",
+      "reason": "SOP API 模板（wally-init 生成）"
+    },
+    {
+      "path": "apis/index.md",
+      "reason": "SOP API 索引（wally-init 生成），未由 codewiki 生成"
+    },
+    {
+      "path": "devops/env.md",
+      "reason": "SOP 开发环境文档，deploy readiness 为 pending"
+    },
+    {
+      "path": "devops/test-env-deploy.md",
+      "reason": "SOP 测试环境部署文档，deploy readiness 为 pending"
+    },
+    {
+      "path": "integration_test/integration_test.md",
+      "reason": "SOP 集成测试执行规范"
+    },
+    {
+      "path": "sqls/README.md",
+      "reason": "SOP 数据库模板；本仓无 SQL"
+    },
+    {
+      "path": "unittest/unittest.md",
+      "reason": "SOP 单元测试规范"
+    }
+  ],
+  "verifiedHead": "f56249214aa183648d6b684b6f39445fe438e52d",
+  "worktreeState": "source-clean (docs 为本次生成的未跟踪变更，由服务端统一提交)",
+  "inspectedScope": [
+    "src/octop_browser/**",
+    "tests/**",
+    "scripts/**",
+    "skills/**",
+    ".github/workflows/**",
+    ".githooks/**",
+    "Makefile",
+    "pyproject.toml",
+    "README.md",
+    "README_CN.md",
+    "AGENTS.md",
+    "CODEBUDDY.md"
+  ],
+  "unresolvedItems": [],
+  "verification": {
+    "passed": true,
+    "unresolvedRefs": 0,
+    "truncatedPages": 0,
+    "duplicatePairs": 0,
+    "gates": {
+      "G1_header_human_and_meta": "PASS",
+      "G2_coverage_and_contracts": "PASS",
+      "G3_closure_and_anchoring": "PASS",
+      "G4_depth_dedup_and_lang": "PASS",
+      "G5_mermaid_safety": "PASS"
+    }
+  }
+}
