@@ -1,0 +1,4 @@
+{
+  "test": ["python3", "-m", "pytest", "-q", "tests/test_experience_welcome.py"],
+  "serve": ["env", "MCP_HOST=0.0.0.0", "MCP_PORT={port}", "python3", "-m", "octop_browser.mcp_server"]
+}

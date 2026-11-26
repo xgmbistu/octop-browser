@@ -479,6 +479,44 @@ async def call_tool(name: str, arguments: dict[str, Any]) -> list[TextContent]:
     return [TextContent(type="text", text=text)]
 
 
+async def handle_welcome(request: Any) -> Any:
+    """Return the native ``GET /welcome`` JSON payload (no authentication)."""
+    from starlette.responses import JSONResponse
+
+    return JSONResponse({"message": "welcome"})
+
+
+def build_http_app() -> Any:
+    """Build the Starlette app for the MCP SSE HTTP transport.
+
+    HTTP-only imports stay inside this function so stdio mode does not need
+    the HTTP stack at import time.
+    """
+    from mcp.server.sse import SseServerTransport
+    from starlette.applications import Starlette
+    from starlette.routing import Route
+
+    sse = SseServerTransport("/messages/")
+
+    async def handle_sse(request: Any) -> Any:
+        async with sse.connect_sse(
+            request.scope, request.receive, request._send
+        ) as streams:
+            await app.run(
+                streams[0],
+                streams[1],
+                app.create_initialization_options(),
+            )
+
+    return Starlette(
+        routes=[
+            Route("/sse", endpoint=handle_sse),
+            Route("/messages/", endpoint=sse.handle_post_message, methods=["POST"]),
+            Route("/welcome", endpoint=handle_welcome, methods=["GET"]),
+        ],
+    )
+
+
 async def _main() -> None:
     """Start the MCP server.
 
@@ -491,31 +529,11 @@ async def _main() -> None:
     mcp_port = os.environ.get("MCP_PORT")
     if mcp_port:
         import uvicorn
-        from mcp.server.sse import SseServerTransport
-        from starlette.applications import Starlette
-        from starlette.routing import Route
 
         port = int(mcp_port)
         host = os.environ.get("MCP_HOST", "0.0.0.0")
 
-        sse = SseServerTransport("/messages/")
-
-        async def handle_sse(request: Any) -> Any:
-            async with sse.connect_sse(
-                request.scope, request.receive, request._send
-            ) as streams:
-                await app.run(
-                    streams[0],
-                    streams[1],
-                    app.create_initialization_options(),
-                )
-
-        starlette_app = Starlette(
-            routes=[
-                Route("/sse", endpoint=handle_sse),
-                Route("/messages/", endpoint=sse.handle_post_message, methods=["POST"]),
-            ],
-        )
+        starlette_app = build_http_app()
 
         config = uvicorn.Config(
             app=starlette_app, host=host, port=port, log_level="info"
